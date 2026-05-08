@@ -3,11 +3,11 @@ import DarkModeToggle from "./components/DarkModeToggle";
 import ProductList from "./components/ProductList";
 import Cart from "./components/Cart";
 
-const products = [
+export const sampleProducts = [
   { id: 1, name: "Milk", category: "Dairy" },
   { id: 2, name: "Cheese", category: "Dairy" },
-  { id: 3, name: "Apple", category: "Fruit" },
-  { id: 4, name: "Banana", category: "Fruit" },
+  { id: 3, name: "Apple", category: "Fruits" },
+  { id: 4, name: "Banana", category: "Fruits" },
   { id: 5, name: "Bread", category: "Bakery" },
   { id: 6, name: "Croissant", category: "Bakery" },
 ];
@@ -30,8 +30,8 @@ function App() {
 
   const filteredProducts =
     category === "All"
-      ? products
-      : products.filter((p) => p.category === category);
+      ? sampleProducts
+      : sampleProducts.filter((p) => p.category === category);
 
   return (
     <div className={darkMode ? "dark" : "light"}>
@@ -41,7 +41,7 @@ function App() {
       <select id="category-filter" onChange={handleCategoryChange} value={category}>
         <option value="All">All</option>
         <option value="Dairy">Dairy</option>
-        <option value="Fruit">Fruit</option>
+        <option value="Fruits">Fruits</option>
         <option value="Bakery">Bakery</option>
       </select>
       <ProductList products={filteredProducts} onAddToCart={handleAddToCart} />
