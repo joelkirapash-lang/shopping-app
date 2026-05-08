@@ -1,0 +1,10 @@
+export const sampleProducts = [
+  { id: 1, name: "Milk", category: "Dairy" },
+  { id: 2, name: "Cheese", category: "Dairy" },
+  { id: 3, name: "Apple", category: "Fruits" },
+  { id: 4, name: "Banana", category: "Fruits" },
+  { id: 5, name: "Bread", category: "Bakery" },
+  { id: 6, name: "Croissant", category: "Bakery" },
+];
+
+export default sampleProducts;
